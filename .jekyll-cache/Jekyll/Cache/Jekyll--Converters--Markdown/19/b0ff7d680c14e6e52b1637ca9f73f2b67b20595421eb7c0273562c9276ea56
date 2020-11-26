@@ -1,0 +1,24 @@
+I"C<h2 id="基本的线程相关知识">基本的线程相关知识</h2>
+<p><a href="https://blog.csdn.net/yu540135101/article/details/84311244">1</a></p>
+
+<p><a href="https://zhuanlan.zhihu.com/p/225917561">pthread</a></p>
+
+<ul>
+  <li>线程的创建与销毁</li>
+  <li>互斥锁（mutex）</li>
+  <li>条件变量 （condition）</li>
+</ul>
+
+<p>C++11: 
+    <code class="language-plaintext highlighter-rouge">#include &lt;thread&gt; std::thread</code></p>
+<h2 id="线程池">线程池</h2>
+<p>线程池就是首先创建一些线程，它们的集合称为线程池。使用线程池可以很好地提高性能，线程池在系统启动时即创建大量空闲的线程，程序将一个任务传给线程池，线程池就会启动一条线程来执行这个任务，执行结束以后，该线程并不会死亡，而是再次返回线程池中成为空闲状态,在这里说是空闲状态其实是被条件变量阻塞了，等待执行下一个任务。</p>
+
+<p>一个线程池包含以下要素：</p>
+<ul>
+  <li>任务</li>
+  <li>线程</li>
+  <li>线程管理</li>
+  <li></li>
+</ul>
+:ET
